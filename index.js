@@ -1,8 +1,7 @@
 let myForm = document.getElementById('search-form');
 
 function saveToWatchlist(imdbID) {
-    let movie = movieData.find((currentMovie) => currentMovie.imdbID == imdbID);
-
+    let movie = movieData.find(response.data.Search);
     let watchlistJSON = localStorage.getItem('watchlist');
     let watchlist = JSON.parse(watchlistJSON);
 
@@ -23,7 +22,7 @@ myForm.addEventListener('submit', e => {
 
     axios.get("http://www.omdbapi.com/?apikey=b43843a0&s=" + urlEncodedSearchString)
             .then(function(response) {
-                console.log(response.data)
+                
                 
                 createHTML.push(response.data.Search);
                 document.getElementsByClassName("movies-container")[0].innerHTML = renderMovies(response.data.Search);
@@ -55,9 +54,9 @@ myForm.addEventListener('submit', e => {
         });
         return movieHTMLArray.join('');
     }
-    const moviesContainer = document.querySelector('.movies-container')
+    
     const moviesRow = document.querySelector('.row')
 
-    moviesContainer.innerHTML = renderMovies(movieData);
+    
 
 });
