@@ -7,7 +7,7 @@
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Features](#features)
-* [Demo] (#Demo)
+* [Demo](#Demo)
 
 ## General info
 This app is a simple tool for searching for movies, saving the ones you want to watch, and later removing them from your watchlist after you watch them. When users search for movies, "Scene It" uses AJAX to make requests to an external API (application programming interface) called OMDb. I built the app to sharpen my skills in rendering data to the DOM (Document Object Model) and to learn more about how the user interface consume's data from the OMDb API.
